@@ -104,6 +104,7 @@ This will display help for the tool. Here are all the switches it supports.
 
 ```
 
+  
 ## Running SCRIPTKIDDI3
   
 Run SCRIPTKIDDI3 in Full Exploiation MODE
