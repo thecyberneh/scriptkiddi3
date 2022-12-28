@@ -91,20 +91,13 @@ This will display help for the tool. Here are all the switches it supports.
 
 ## Running SCRIPTKIDDI3
   
+Run SCRIPTKIDDI3 in Full Exploiation MODE
 ```console
-     Run scriptkiddi3 in full Exploitation mode
-         scriptkiddi3 -m EXP -d target.com
-
-
-     Use your own CONFIG file for subfinder
-         scriptkiddi3 -m EXP -d target.com -c /path/to/config.yaml
-
-
-     Run scriptkiddi3 in SUBDOMAIN ENUMERATION mode
-         scriptkiddi3 -m SUB -d target.com
-
-
-     Run scriptkiddi3 in URL ENUMERATION mode
-         scriptkiddi3 -m SUB -d target.com  
+  scriptkiddi3 -m EXP -d target.com
 ```
   
+Full Exploitation MODE contain following functions
+- Effective Subdomain Enumeration with different services and open source tools
+- Effetive URL Enumeration ( HTTP and HTTPs service )
+- Run Vulnerability Detection with Nuclei
+- Subdomain Takeover Test on previous results
