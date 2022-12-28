@@ -87,7 +87,7 @@ This will display help for the tool. Here are all the switches it supports.
 
     [HELP:]     -h, --help      to get help menu  
       
-    [UPDATE:]     -u, --update    to update tool
+    [UPDATE:]   -u, --update    to update tool
   
 [Examples:]
      Run scriptkiddi3 in full Exploitation mode
