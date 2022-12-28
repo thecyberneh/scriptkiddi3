@@ -17,9 +17,9 @@ A recon and initial vulnerability detection tool built using shell script and op
 <br>
 <a href="https://twitter.com/thecyberneh"><img src="https://img.shields.io/twitter/follow/thecyberneh?style=social"></a>
 
-
-</p>
 ---
+</p>
+
  
 "Introducing SCRIPTKIDDI3, a powerful recon and initial vulnerability detection tool for Bug Bounty Hunters. Built using a variety of open-source tools and a shell script, SCRIPTKIDDI3 allows you to quickly and efficiently run a scan on the target domain and identify potential vulnerabilities.
 
