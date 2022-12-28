@@ -92,12 +92,57 @@ This will display help for the tool. Here are all the switches it supports.
 ## Running SCRIPTKIDDI3
   
 Run SCRIPTKIDDI3 in Full Exploiation MODE
-```console
+```sh
   scriptkiddi3 -m EXP -d target.com
 ```
   
-Full Exploitation MODE contain following functions
+FULL EXPLOITATION MODE contains following functions
 - Effective Subdomain Enumeration with different services and open source tools
 - Effetive URL Enumeration ( HTTP and HTTPs service )
 - Run Vulnerability Detection with Nuclei
 - Subdomain Takeover Test on previous results
+
+  
+Run scriptkiddi3 in SUBDOMAIN ENUMERATION mode
+```sh
+  scriptkiddi3 -m SUB -d target.com
+```
+SUBDOMAIN ENUMERATION MODE contains following functions
+- Effective Subdomain Enumeration with different services and open source tools
+  You can use this mode if you only want to get subdomains from this tool
+  or we can say Automation of Subdmain Enumeration by different tools
+ 
+
+Run scriptkiddi3 in URL ENUMERATION mode
+```sh
+  scriptkiddi3 -m URL -d target.com
+```
+URL ENUMERATION MODE contains following functions
+  - Same Feature as SUBDOMAIN ENUMERATION MODE but also identify HTTP or HTTPS service
+  
+Using your own CONFIG File for subfinder
+```sh
+  scriptkiddi3 -m EXP -d target.com -c /path/to/config.yaml
+```
+You can also provie your own CONDIF file with your API Keys for subdomain enumeration with subfinder
+
+An Example of config.yaml
+```console
+binaryedge:
+  - 0bf8919b-aab9-42e4-9574-d3b639324597
+  - ac244e2f-b635-4581-878a-33f4e79a2c13
+censys:
+  - ac244e2f-b635-4581-878a-33f4e79a2c13:dd510d6e-1b6e-4655-83f6-f347b363def9
+certspotter: []
+passivetotal:
+  - sample-email@user.com:sample_password
+securitytrails: []
+shodan:
+  - AAAAClP1bJJSRMEYJazgwhJKrggRwKA
+github:
+  - ghp_lkyJGU3jv1xmwk4SDXavrLDJ4dl2pSJMzj4X
+  - ghp_gkUuhkIYdQPj13ifH4KA3cXRn8JD2lqir2d4
+zoomeye:
+  - zoomeye_username:zoomeye_password
+```
+  
