@@ -55,5 +55,55 @@ bash installer.sh
 scriptkiddi3 -h
 ```
 This will display help for the tool. Here are all the switches it supports.
+  
+```console
+[ABOUT]
+   Streamline your recon and vulnerability detection process with SCRIPTKIDDI3,
+   A recon and initial vulnerability detection tool built using shell script and open source tools.
+
+
+[Usage:]
+   scriptkiddi3 [MODE] [FLAGS]
+   scriptkiddi3 -m EXP -d target.com -c /path/to/config.yaml
+
+
+[MODES:]
+    ['-m'/'--mode']
+         Available Options for MODE: 
+         SUB | sub | SUBDOMAIN | subdomain           Run scriptkiddi3 in SUBDOMAIN ENUMERATION mode
+         URL | url                                   Run scriptkiddi3 in URL ENUMERATION mode
+         EXP | exp | EXPLOIT | exploit               Run scriptkiddi3 in Full Exploitation mode
+
+
+         Feature of EXPLOI mode :                    subdomain enumaration, URL Enumeration,
+                                                     Vulnerability Detection with Nuclei,
+                                                     and Scan for SUBDOMAINE TAKEOVER
+
+[FLAGS:]
+    [TARGET:]   -d, --domain    target domain to scan
+
+
+    [CONFIG:]   -c, --config    path of your configuration file for subfinder
+
+
+    [HELP:]     -h, --help      to get help menu
+
+
+[Examples:]
+     Run scriptkiddi3 in full Exploitation mode
+         scriptkiddi3 -m EXP -d target.com
+
+
+     Use your own CONFIG file for subfinder
+         scriptkiddi3 -m EXP -d target.com -c /path/to/config.yaml
+
+
+     Run scriptkiddi3 in SUBDOMAIN ENUMERATION mode
+         scriptkiddi3 -m SUB -d target.com
+
+
+     Run scriptkiddi3 in URL ENUMERATION mode
+         scriptkiddi3 -m SUB -d target.com                                                             
+```
 
   
