@@ -86,6 +86,8 @@ This will display help for the tool. Here are all the switches it supports.
     [CONFIG:]   -c, --config    path of your configuration file for subfinder
 
     [HELP:]     -h, --help      to get help menu  
+      
+    [UPDATE:]     -u, --update    to update tool
   
 [Examples:]
      Run scriptkiddi3 in full Exploitation mode
@@ -142,6 +144,12 @@ Using your own CONFIG File for subfinder
   scriptkiddi3 -m EXP -d target.com -c /path/to/config.yaml
 ```
 You can also provie your own CONDIF file with your API Keys for subdomain enumeration with subfinder
+  
+Updating tool to latest version
+You can run following command to update tool
+```sh
+  scriptkiddi3 -u
+```
 
 An Example of config.yaml
 ```yaml
