@@ -174,5 +174,5 @@ zoomeye:
 ## For Developers
 If you have ideas for new functionality or modes that you would like to see in this tool, you can always submit a pull request (PR) to contribute your changes.
   
-If you have any other queries, you can always contact me on <a href="https://twitter.com/thecyberneh">Twitter: thecyberneh </a>
+If you have any other queries, you can always contact me on <a href="https://twitter.com/thecyberneh">Twitter(thecyberneh) </a>
   
