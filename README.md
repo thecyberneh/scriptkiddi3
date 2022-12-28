@@ -19,3 +19,15 @@ A recon and initial vulnerability detection tool built using shell script and op
 
 
 </p>
+---
+ 
+"Introducing SCRIPTKIDDI3, a powerful recon and initial vulnerability detection tool for Bug Bounty Hunters. Built using a variety of open-source tools and a shell script, SCRIPTKIDDI3 allows you to quickly and efficiently run a scan on the target domain and identify potential vulnerabilities.
+
+SCRIPTKIDDI3 begins by performing recon on the target system, collecting information such as subdomains, and running services with nuclei. It then uses this information to scan for known vulnerabilities and potential attack vectors, alerting you to any high-risk issues that may need to be addressed.
+
+In addition, SCRIPTKIDDI3 also includes features for identifying misconfigurations and insecure default settings with nuclei templates, helping you ensure that your systems are properly configured and secure.
+
+SCRIPTKIDDI3 is an essential tool for conducting thorough and effective recon and vulnerability assessments.
+Let's Find Bugs with SCRIPTKIDDI3
+
+[Thanks ChatGPT for the Description]
