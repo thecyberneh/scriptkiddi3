@@ -11,7 +11,7 @@ A recon and initial vulnerability detection tool built using shell script and op
 </p>
 <p align="center">
 <a><img title="Version" src="https://img.shields.io/badge/Version-v1.0.0_dev-blue.svg"></a>
-<a href="https://twitter.com/thecyberneh"><img src="https://img.shields.io/twitter/follow/thecyberneh?style=social"></a>
+<a href="https://twitter.com/thecyberneh"><img src="https://img.shields.io/twitter/follow/thecyberneh?style=social"></a><br>
 <a href="https://github.com/thecyberneh/scriptkiddi3/releases"><img src="https://img.shields.io/github/downloads/thecyberneh/scriptkiddi3/total">
 <a href="https://github.com/thecyberneh/scriptkiddi3/releases/"><img src="https://img.shields.io/github/release/thecyberneh/scriptkiddi3">
 
