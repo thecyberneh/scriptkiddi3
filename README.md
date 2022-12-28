@@ -86,10 +86,12 @@ This will display help for the tool. Here are all the switches it supports.
     [CONFIG:]   -c, --config    path of your configuration file for subfinder
 
 
-    [HELP:]     -h, --help      to get help menu
+    [HELP:]     -h, --help      to get help menu                                                           
+```
 
-
-[Examples:]
+## Running SCRIPTKIDDI3
+  
+```console
      Run scriptkiddi3 in full Exploitation mode
          scriptkiddi3 -m EXP -d target.com
 
@@ -103,7 +105,6 @@ This will display help for the tool. Here are all the switches it supports.
 
 
      Run scriptkiddi3 in URL ENUMERATION mode
-         scriptkiddi3 -m SUB -d target.com                                                             
+         scriptkiddi3 -m SUB -d target.com  
 ```
-
   
