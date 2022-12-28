@@ -26,7 +26,7 @@ banner () {
 ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   ╚═╝  ╚═╝╚═╝╚═════╝ ╚═════╝ ╚═╝╚═════╝ 
                                                                                     
 
-                            V0.1.0 (beta)
+                            V1.0.0 (beta)
                             Coded By Neh Patel with Love <3 ❤
     "$reset""
 
@@ -93,6 +93,7 @@ fun_err () {
 
 #for_help
 fun_help () {
+  banner
   echo -e "${lyellow}[ABOUT]${reset}"
   echo -e "   Streamline your recon and vulnerability detection process with SCRIPTKIDDI3,"
   echo -e "   A recon and initial vulnerability detection tool built using shell script and open source tools."
@@ -124,6 +125,8 @@ fun_help () {
   echo -e "\n"
   echo -e "${yellow}    [HELP:]${reset}     -h, --help      to get help menu"
   #echo -e "       -h, --help    to get help menu" 
+  echo -e "\n"
+  echo -e "${yellow}    [UPDATE:]${reset}     -u, --update    to update tool"
   echo -e "\n"
   echo -e "${lyellow}[Examples:]${reset}"
   echo -e "     Run scriptkiddi3 in full Exploitation mode"
@@ -459,6 +462,5 @@ then
 
 else
     echo -e "$(fun_err) Unable to understand ${lyellow}MODE${reset}, Running help Menu"
-    banner
     fun_help
 fi
