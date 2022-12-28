@@ -176,3 +176,6 @@ If you have ideas for new functionality or modes that you would like to see in t
   
 If you have any other queries, you can always contact me on <a href="https://twitter.com/thecyberneh">Twitter(thecyberneh) </a>
   
+
+## Credits
+I would like to express our gratitude to all of the open source projects that have made this tool possible and have made recon tasks easier to accomplish.
