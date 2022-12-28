@@ -84,7 +84,24 @@ This will display help for the tool. Here are all the switches it supports.
 
     [CONFIG:]   -c, --config    path of your configuration file for subfinder
 
-    [HELP:]     -h, --help      to get help menu                                                           
+    [HELP:]     -h, --help      to get help menu  
+  
+[Examples:]
+     Run scriptkiddi3 in full Exploitation mode
+         scriptkiddi3 -m EXP -d target.com
+
+
+     Use your own CONFIG file for subfinder
+         scriptkiddi3 -m EXP -d target.com -c /path/to/config.yaml
+
+
+     Run scriptkiddi3 in SUBDOMAIN ENUMERATION mode
+         scriptkiddi3 -m SUB -d target.com
+
+
+     Run scriptkiddi3 in URL ENUMERATION mode
+         scriptkiddi3 -m SUB -d target.com
+
 ```
 
 ## Running SCRIPTKIDDI3
