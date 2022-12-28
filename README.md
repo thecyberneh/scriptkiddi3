@@ -31,3 +31,29 @@ SCRIPTKIDDI3 is an essential tool for conducting thorough and effective recon an
 Let's Find Bugs with SCRIPTKIDDI3
 
 [Thanks ChatGPT for the Description]
+  
+  
+## How it Works ?
+This tool mainly performs 3 tasks
+1. Effective Subdomain Enumeration from Various Tools
+2. Get URLs with open HTTP and HTTPS service.
+3. Run a Nuclei and other scans on previous output
+So basically, this is an autmation script for your initial recon in bugbounty
+  
+## Install SCRIPTKIDDI3
+   SCRIPTKIDDI3 requires different tools to run successfully. Run the following command to install the latest version with all requirments-
+
+ ```sh
+git clone https://github.com/thecyberneh/scriptkiddi3.git
+cd scriptkiddi3
+bash installer.sh
+```
+  
+## Usage 
+
+```sh
+scriptkiddi3 -h
+```
+This will display help for the tool. Here are all the switches it supports.
+
+  
