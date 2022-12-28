@@ -57,17 +57,17 @@ scriptkiddi3 -h
 This will display help for the tool. Here are all the switches it supports.
   
 ```yaml
-[ABOUT]
+ABOUT:
    Streamline your recon and vulnerability detection process with SCRIPTKIDDI3,
    A recon and initial vulnerability detection tool built using shell script and open source tools.
 
 
-[Usage:]
+Usage:
    scriptkiddi3 [MODE] [FLAGS]
    scriptkiddi3 -m EXP -d target.com -c /path/to/config.yaml
 
 
-[MODES:]
+MODES:
     ['-m'/'--mode']
          Available Options for MODE: 
          SUB | sub | SUBDOMAIN | subdomain           Run scriptkiddi3 in SUBDOMAIN ENUMERATION mode
@@ -79,7 +79,7 @@ This will display help for the tool. Here are all the switches it supports.
                                                      Vulnerability Detection with Nuclei,
                                                      and Scan for SUBDOMAINE TAKEOVER
 
-[FLAGS:]
+FLAGS:
     [TARGET:]   -d, --domain    target domain to scan
 
 
