@@ -56,7 +56,7 @@ scriptkiddi3 -h
 ```
 This will display help for the tool. Here are all the switches it supports.
   
-```console
+```yaml
 [ABOUT]
    Streamline your recon and vulnerability detection process with SCRIPTKIDDI3,
    A recon and initial vulnerability detection tool built using shell script and open source tools.
@@ -127,7 +127,7 @@ Using your own CONFIG File for subfinder
 You can also provie your own CONDIF file with your API Keys for subdomain enumeration with subfinder
 
 An Example of config.yaml
-```console
+```yaml
 binaryedge:
   - 0bf8919b-aab9-42e4-9574-d3b639324597
   - ac244e2f-b635-4581-878a-33f4e79a2c13
