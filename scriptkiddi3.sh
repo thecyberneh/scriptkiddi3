@@ -126,7 +126,7 @@ fun_help () {
   echo -e "${yellow}    [HELP:]${reset}     -h, --help      to get help menu"
   #echo -e "       -h, --help    to get help menu" 
   echo -e "\n"
-  echo -e "${yellow}    [UPDATE:]${reset}     -u, --update    to update tool"
+  echo -e "${yellow}    [UPDATE:]${reset}   -u, --update    to update tool"
   echo -e "\n"
   echo -e "${lyellow}[Examples:]${reset}"
   echo -e "     Run scriptkiddi3 in full Exploitation mode"
