@@ -116,7 +116,7 @@ Run SCRIPTKIDDI3 in Full Exploiation MODE
   
 FULL EXPLOITATION MODE contains following functions
 - Effective Subdomain Enumeration with different services and open source tools
-- Effetive URL Enumeration ( HTTP and HTTPs service )
+- Effective URL Enumeration ( HTTP and HTTPs service )
 - Run Vulnerability Detection with Nuclei
 - Subdomain Takeover Test on previous results
 
