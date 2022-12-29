@@ -127,7 +127,7 @@ Run scriptkiddi3 in SUBDOMAIN ENUMERATION mode
 ```
 SUBDOMAIN ENUMERATION MODE contains following functions
 - Effective Subdomain Enumeration with different services and open source tools
-  You can use this mode if you only want to get subdomains from this tool
+- You can use this mode if you only want to get subdomains from this tool
   or we can say Automation of Subdmain Enumeration by different tools
  
 
