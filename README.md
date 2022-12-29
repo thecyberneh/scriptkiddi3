@@ -136,7 +136,7 @@ Run scriptkiddi3 in URL ENUMERATION mode
   scriptkiddi3 -m URL -d target.com
 ```
 URL ENUMERATION MODE contains following functions
-  - Same Feature as SUBDOMAIN ENUMERATION MODE but also identify HTTP or HTTPS service
+  - Same Feature as SUBDOMAIN ENUMERATION MODE but also identifies HTTP or HTTPS service
   
 Using your own CONFIG File for subfinder
 ```sh
