@@ -128,7 +128,8 @@ FULL EXPLOITATION MODE contains following functions
 - Effective URL Enumeration ( HTTP and HTTPs service )
 - Run Vulnerability Detection with Nuclei
 - Subdomain Takeover Test on previous results
-
+<br>
+  
 ### 2. SUBDOMAIN ENUMERATION MODE <br>
 Run scriptkiddi3 in SUBDOMAIN ENUMERATION MODE
 ```sh
@@ -138,7 +139,8 @@ SUBDOMAIN ENUMERATION MODE contains following functions
 - Effective Subdomain Enumeration with different services and open source tools
 - You can use this mode if you only want to get subdomains from this tool
   or we can say Automation of Subdmain Enumeration by different tools
- 
+<br>
+  
 ### 3. URL ENUMERATION MODE <br>
 Run scriptkiddi3 in URL ENUMERATION MODE
 ```sh
