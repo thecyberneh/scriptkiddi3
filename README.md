@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://twitter.com/thecyberneho"><img src="images/scriptkiddi3Nobg.png" alt="SCRIPTKIDDI3"></a>
+  <a href="https://twitter.com/thecyberneh"><img src="images/scriptkiddi3Nobg.png" alt="SCRIPTKIDDI3"></a>
 </h1>
 <h4 align="center">Streamline your recon and vulnerability detection process with SCRIPTKIDDI3,
 A recon and initial vulnerability detection tool built using shell script and open source tools.</h4>
