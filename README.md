@@ -116,9 +116,9 @@ This will display help for the tool. Here are all the switches it supports.
 ```
 
   
-## Running SCRIPTKIDDI3
-  
-Run SCRIPTKIDDI3 in Full Exploiation MODE
+## MODES 
+1. FULL EXPLOITATION MODE
+Run SCRIPTKIDDI3 in FULL EXPLOITATION MODE
 ```sh
   scriptkiddi3 -m EXP -d target.com
 ```
@@ -129,8 +129,8 @@ FULL EXPLOITATION MODE contains following functions
 - Run Vulnerability Detection with Nuclei
 - Subdomain Takeover Test on previous results
 
-  
-Run scriptkiddi3 in SUBDOMAIN ENUMERATION mode
+2. SUBDOMAIN ENUMERATION MODE 
+Run scriptkiddi3 in SUBDOMAIN ENUMERATION MODE
 ```sh
   scriptkiddi3 -m SUB -d target.com
 ```
@@ -139,8 +139,8 @@ SUBDOMAIN ENUMERATION MODE contains following functions
 - You can use this mode if you only want to get subdomains from this tool
   or we can say Automation of Subdmain Enumeration by different tools
  
-
-Run scriptkiddi3 in URL ENUMERATION mode
+3. URL ENUMERATION MODE
+Run scriptkiddi3 in URL ENUMERATION MODE
 ```sh
   scriptkiddi3 -m URL -d target.com
 ```
