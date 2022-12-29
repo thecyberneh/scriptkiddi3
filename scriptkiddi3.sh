@@ -37,8 +37,6 @@ Instagram :- https://www.instagram.com/thecyberneh/
 Linkedin :-  https://linkedin.com/in/thecyberneh
 "$reset""
 echo -e "\n"
-echo -e "\n"
-echo -e "\n"
 }
 
 
@@ -85,6 +83,37 @@ fun_imp () {
 #for_print_ERR
 fun_err () {
     echo -e "[${dred}ERR${reset}]  "
+}
+
+
+#-----------------------------------------------------------------#
+
+
+#for_create_directory
+fun_dir () {
+    mkdir ${DOMAIN}
+    cd ${DOMAIN}
+    sleep .5
+    echo -e "$(fun_info) Saving all output files in directory: ${DOMAIN}"
+    sleep .5
+    echo -e "\n"
+}
+
+
+#-----------------------------------------------------------------#
+
+
+#print_flags
+fun_flags () {
+    sleep .5
+    echo -e "$(fun_info) Target Domain:- $DOMAIN"
+    echo -e "\n"
+    sleep .5
+    echo -e "$(fun_info) Config File:- $CONFIG"
+    echo -e "\n"
+    sleep .5
+    echo -e "$(fun_info) Mode:- $MODE"
+    echo -e "\n"
 }
 
 
@@ -375,8 +404,6 @@ while true; do
             fi
 
             DOMAIN=$2
-            echo -e "$(fun_info) Target Domain:- $DOMAIN"
-            echo -e "\n"
             shift 2
             continue
             ;;
@@ -391,8 +418,6 @@ while true; do
             fi
 
             MODE=$2 
-            echo -e "$(fun_info) Mode:- $MODE"
-            echo -e "\n"
             shift 2
             continue
             ;;
@@ -407,8 +432,6 @@ while true; do
             fi
 
             CONFIG=$2
-            echo -e "$(fun_info) Config File:- $CONFIG"
-            echo -e "\n"
             shift 2
             continue
             ;;
@@ -444,17 +467,23 @@ done
 if [ "$MODE" = 'sub' ] || [ "$MODE" = 'SUB' ] || [ "$MODE" = 'subdomain' ]  || [ "$MODE" = 'SUBDOMAIN' ]
 then
     banner
+    fun_flags
+    fun_dir
     fun_getAllSubd
 
 elif [ "$MODE" = 'url' ] || [ "$MODE" = 'URL' ]
 then
     banner
+    fun_flags
+    fun_dir
     fun_getAllSubd
     fun_getUrl
 
 elif [ "$MODE" = 'exploit' ] || [ "$MODE" = 'EXPLOIT' ] || [ "$MODE" = 'EXP' ] || [ "$MODE" = 'exp' ]
 then
     banner
+    fun_flags
+    fun_dir
     fun_getAllSubd
     fun_getUrl
     fun_runNuclei
