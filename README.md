@@ -16,6 +16,15 @@ A recon and initial vulnerability detection tool built using shell script and op
 <br>
 <a href="https://twitter.com/thecyberneh"><img src="https://img.shields.io/twitter/follow/thecyberneh?style=social"></a>
 
+<p align="center">
+  <a href="#how-it-works-">How it works</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#running-scriptkiddi3">MODES</a>
+  <a href="#install-scriptkiddi3">Install</a> •
+  <a href="#for-developers">For Developers</a> •
+  <a href="#credits">Credits</a> 
+</p>
+
 ---
 </p>
 
