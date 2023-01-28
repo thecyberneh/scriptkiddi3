@@ -26,7 +26,7 @@ banner () {
 ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   ╚═╝  ╚═╝╚═╝╚═════╝ ╚═════╝ ╚═╝╚═════╝ 
                                                                                     
 
-                            V0.1.1 (beta)
+                            V0.1.2 (beta)
                             Coded By Neh Patel with Love <3 ❤
     "$reset""
 
@@ -188,7 +188,7 @@ run_subzy () {
     then
         sleep .5
         echo -e "$(fun_info) Checking for Subdomain Takeover "
-        subzy --targets allSubdomains.txt | tee subDomain_takeover_Results.txt
+        subzy run --targets allSubdomains.txt | tee subDomain_takeover_Results.txt
         echo -e "\n"
     fi
 }
@@ -301,13 +301,21 @@ fun_amassEnum () {
 #for_run_ffufbrute
 fun_ffufBruteEnum () {
     echo -e "\n"
-    echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from FFUF Bruteforce... "
+    read -t 5 -p "$(fun_input) Want to get subdomain with bruteforce ? " FFUFBF
     echo -e "\n"
-    echo -e "\n"
-    ffuf -u https://FUZZ.${DOMAIN}/ -w /usr/share/wordlists/subdomains.txt -v | grep '| URL |' | grep -Po '.*?//\K.*?(?=/)' | tee ffufBruteSubdResults.txt
-    echo -e "\n"
-    echo -e "\n"
-    echo -e "$(fun_info) FFUF Bruteforce Completed, Results saves in file: ${lyellow}ffufBruteSubdResults.txt${reset}"
+    if [ "$FFUFBF" = 'y' ] || [ "$FFUFBF" = 'Y' ]
+    then    
+        echo -e "\n"
+        echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from FFUF Bruteforce... "
+        echo -e "\n"
+        echo -e "\n"
+        ffuf -u https://FUZZ.${DOMAIN}/ -w /usr/share/wordlists/subdomains.txt -v | grep '| URL |' | grep -Po '.*?//\K.*?(?=/)' | tee ffufBruteSubdResults.txt
+        echo -e "\n"
+        echo -e "\n"
+        echo -e "$(fun_info) FFUF Bruteforce Completed, Results saves in file: ${lyellow}ffufBruteSubdResults.txt${reset}"
+    else
+        touch ffufBruteSubdResults.txt
+    fi
 }
 
 
