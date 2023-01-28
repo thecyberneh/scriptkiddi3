@@ -171,7 +171,7 @@ fun_help () {
   echo -e "\n"
 
   echo -e "     Run scriptkiddi3 in URL ENUMERATION mode"
-  echo -e "${lyellow}         scriptkiddi3 -m SUB -d target.com${reset}"
+  echo -e "${lyellow}         scriptkiddi3 -m URL -d target.com${reset}"
   echo -e "\n"
 }
 
