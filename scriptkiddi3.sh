@@ -139,7 +139,7 @@ fun_help () {
   echo -e "         URL | url                                   Run scriptkiddi3 in URL ENUMERATION mode"
   echo -e "         EXP | exp | EXPLOIT | exploit               Run scriptkiddi3 in Full Exploitation mode"
   echo -e "\n"
-  echo -e "         Feature of EXPLOI mode :                    subdomain enumaration, URL Enumeration,"
+  echo -e "         Feature of EXPLOIT mode :                    subdomain enumaration, URL Enumeration,"
   echo -e "                                                     Vulnerability Detection with Nuclei,"
   echo -e "                                                     and Scan for SUBDOMAINE TAKEOVER"
   echo -e ""
@@ -206,7 +206,10 @@ fun_subFinderEnum () {
         echo -e "$(fun_info) We are not using API Keys "
         echo -e "\n"
         echo -e "\n"        
-        subfinder -d $DOMAIN -o subfinderWAPIResults.txt
+        subfinder -silent -d $DOMAIN -o subfinderWAPIResults.txt
+        echo -e "\n"
+        echo -e "\n"
+        echo -e "$(fun_info) It will take some time depens on your target size "
         echo -e "\n"
         echo -e "\n"
         echo -e "$(fun_info) Subfider Enumeration Completed, Results saves in file: ${lyellow}subfinderWAPIResults.txt${reset}"
@@ -366,7 +369,10 @@ fun_getUrl () {
     echo -e "$(fun_init) Getting URLs from httpx... "
     echo -e "\n"
     echo -e "\n"
-    cat allSubdomains.txt | httpx | tee httpxResults.txt
+    echo -e "$(fun_info) It will take some time depens on your target size "
+    echo -e "\n"
+    echo -e "\n"
+    cat allSubdomains.txt | httpx -silent | tee httpxResults.txt
     echo -e "\n"
     sort httprobeResults.txt httpxResults.txt | uniq | tee allUrls.txt
     echo -e "\n"
@@ -382,10 +388,10 @@ fun_getUrl () {
 #run_nuclei
 fun_runNuclei () {
     echo -e "\n"
-    echo -e "$(fun_init) Running Vulnerability detection from Nuclei... "
+    echo -e "$(fun_init) Running Vulnerability detection "
     echo -e "\n"
     echo -e "\n"
-    nuclei -l allUrls.txt -t $HOME/nuclei-templates/ -o nucleiResults.txt
+    nuclei -silent -l allUrls.txt -t $HOME/nuclei-templates/ -o nucleiResults.txt
 } 
 
 
