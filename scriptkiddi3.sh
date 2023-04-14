@@ -181,16 +181,9 @@ fun_help () {
 
 #forRunSubzy
 run_subzy () {
+    echo -e "$(fun_info) Checking for Subdomain Takeover "
+    subzy run --targets allSubdomains.txt | tee subDomain_takeover_Results.txt
     echo -e "\n"
-    read -t 5 -p "$(fun_input) Want to scan for Subdomain takeover ? " SUBZY
-    echo -e "\n"
-    if [ "$SUBZY" = 'y' ] || [ "$SUBZY" = 'Y' ]
-    then
-        sleep .5
-        echo -e "$(fun_info) Checking for Subdomain Takeover "
-        subzy run --targets allSubdomains.txt | tee subDomain_takeover_Results.txt
-        echo -e "\n"
-    fi
 }
 
 
@@ -312,7 +305,7 @@ fun_ffufBruteEnum () {
         echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from FFUF Bruteforce... "
         echo -e "\n"
         echo -e "\n"
-        ffuf -u https://FUZZ.${DOMAIN}/ -w /usr/share/wordlists/subdomains.txt -v | grep '| URL |' | grep -Po '.*?//\K.*?(?=/)' | tee ffufBruteSubdResults.txt
+        ffuf -u "https://FUZZ.${DOMAIN}/" -w /usr/share/wordlists/subdomains.txt -v | grep '| URL |' | grep -Po '.*?//\K.*?(?=/)' | tee ffufBruteSubdResults.txt
         echo -e "\n"
         echo -e "\n"
         echo -e "$(fun_info) FFUF Bruteforce Completed, Results saves in file: ${lyellow}ffufBruteSubdResults.txt${reset}"
@@ -331,7 +324,7 @@ fun_crtshEnum () {
     echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from crt.sh ... "
     echo -e "\n"
     echo -e "\n"
-    curl -s "https://crt.sh?q=${DOMAIN}&output=json" | jq ".[].common_name,.[].name_value"| cut -d'"' -f2 | sed 's/\\n/\n/g' | sed 's/\*.//g'| sed -r 's/([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4})//g' | sort | uniq | tee crtshResults.txt
+    curl -s "https://crt.sh?q=${DOMAIN}&output=json" | jq ".[].common_name,.[].name_value" | cut -d'"' -f2 | sed 's/\\n/\n/g' | sed 's/\*.//g'| sed -r 's/([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4})//g' | sort | uniq | tee crtshResults.txt
     echo -e "\n"
     echo -e "\n"
     echo -e "$(fun_info) CRT SH Bruteforce Completed, Results saves in file: ${lyellow}crtshResults.txt${reset}"    
@@ -391,7 +384,7 @@ fun_runNuclei () {
     echo -e "$(fun_init) Running Vulnerability detection "
     echo -e "\n"
     echo -e "\n"
-    nuclei -silent -l allUrls.txt -t $HOME/nuclei-templates/ -rl 500 -bs 200 -stats -o nucleiResults.txt
+    nuclei -silent -l allUrls.txt -t $HOME/nuclei-templates/ -o nucleiResults.txt
 } 
 
 
