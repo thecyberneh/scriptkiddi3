@@ -25,5 +25,9 @@ wget https://wordlists-cdn.assetnote.io/data/automated/httparchive_subdomains_20
 mv subdomains.txt /usr/share/wordlists/
 chmod 777 /usr/share/wordlists/subdomains.txt
 
+wget "https://raw.githubusercontent.com/projectdiscovery/notify/main/cmd/integration-test/test-config.yaml" 
+mv test-config.yaml provider-config.yaml
+mv provider-config.yaml /$HOME/.config/notify/
+
 
 echo -e "DO NOT FORGET TO ADD YOUR OWN WEBHOOK URL IN $HOME/.config/notify/provider-config.yaml"
