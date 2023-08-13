@@ -6,6 +6,7 @@ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install -v github.com/OWASP/Amass/v3/...@master
 go install github.com/ffuf/ffuf@latest
 go install -v github.com/LukaSikic/subzy@latest
+go install -v github.com/projectdiscovery/notify/cmd/notify@latest
 wget https://github.com/findomain/findomain/releases/latest/download/findomain-linux.zip
 unzip findomain-linux.zip  
 mv findomain $HOME/go/bin
@@ -23,3 +24,6 @@ rm -rf scriptkiddi3.sh
 wget https://wordlists-cdn.assetnote.io/data/automated/httparchive_subdomains_2020_11_18.txt -O  subdomains.txt
 mv subdomains.txt /usr/share/wordlists/
 chmod 777 /usr/share/wordlists/subdomains.txt
+
+
+echo -e "DO NOT FORGET TO ADD YOUR OWN WEBHOOK URL IN $HOME/.config/notify/provider-config.yaml"
