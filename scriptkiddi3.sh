@@ -384,7 +384,7 @@ fun_runNuclei () {
     echo -e "$(fun_init) Running Vulnerability detection "
     echo -e "\n"
     echo -e "\n"
-    nuclei -silent -l allUrls.txt -t $HOME/nuclei-templates/ -o nucleiResults.txt
+    nuclei -silent -l allUrls.txt -t $HOME/nuclei-templates/ -o nucleiResults.txt --stats
 } 
 
 
