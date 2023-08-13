@@ -181,7 +181,7 @@ fun_help () {
 
 #forRunSubzy
 run_subzy () {
-    echo -e "$(fun_info) Checking for Subdomain Takeover " | notify
+    echo -e "$(fun_info) Checking for Subdomain Takeover " | notify -silent
     subzy run --targets allSubdomains.txt | tee subDomain_takeover_Results.txt
     echo -e "\n"
 }
@@ -194,7 +194,7 @@ run_subzy () {
 fun_subFinderEnum () {
     if [ "$CONFIG" = '' ]
     then
-        echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from subfinder... " | notify
+        echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from subfinder... " | notify -silent
         echo -e "\n"
         echo -e "$(fun_info) We are not using API Keys "
         echo -e "\n"
@@ -205,11 +205,11 @@ fun_subFinderEnum () {
         echo -e "$(fun_info) It will take some time depens on your target size "
         echo -e "\n"
         echo -e "\n"
-        echo -e "$(fun_info) Subfider Enumeration Completed, Results saves in file: ${lyellow}subfinderWAPIResults.txt${reset}" | notify
+        echo -e "$(fun_info) Subfider Enumeration Completed, Results saves in file: ${lyellow}subfinderWAPIResults.txt${reset}" | notify -silent
         touch subfinderNoAPIResults.txt
         echo -e "File touch done"
     else
-        echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from subfinder... " | notify
+        echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from subfinder... " | notify -silent
         echo -e "\n"
         echo -e "$(fun_info) We are using API Keys "
         echo -e "\n"
@@ -217,7 +217,7 @@ fun_subFinderEnum () {
         subfinder -d $DOMAIN -pc $CONFIG -o subfinderNoAPIResults.txt
         echo -e "\n"
         echo -e "\n"
-        echo -e "$(fun_info) Subfider Enumeration Completed, Results saves in file: ${lyellow}subfinderNoAPIResults.txt${reset}" | notify
+        echo -e "$(fun_info) Subfider Enumeration Completed, Results saves in file: ${lyellow}subfinderNoAPIResults.txt${reset}" | notify -silent
         touch subfinderWAPIResults.txt
     fi
     echo -e "\n"
@@ -236,13 +236,13 @@ fun_subFinderEnum () {
 #for_run_findomain
 fun_findomainEnum () {
     echo -e "\n"
-    echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from findomain... " | notify
+    echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from findomain... " | notify -silent
     echo -e "\n"
     echo -e "\n"
     findomain --target $DOMAIN --output
     echo -e "\n"
     echo -e "\n"
-    echo -e "$(fun_info) Findomain Enumeration Completed, Results saves in file: ${lyellow}${DOMAIN}.txt${reset}" | notify
+    echo -e "$(fun_info) Findomain Enumeration Completed, Results saves in file: ${lyellow}${DOMAIN}.txt${reset}" | notify -silent
 }
 
 
@@ -258,13 +258,13 @@ ownedby () {
     then
         sleep .5
         echo -e "\n"
-        echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from Amass intel... " | notify
+        echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from Amass intel... " | notify -silent
         echo -e "\n"
         echo -e "\n"
         amass intel -whois -d $DOMAIN -o amassIntelResults.txt
         echo -e "\n"
         echo -e "\n"
-        echo -e "$(fun_info) Amass [Mode:Intel] Enumeration Completed, Results saves in file: ${lyellow}amassIntelResults.txt${reset}" | notify 
+        echo -e "$(fun_info) Amass [Mode:Intel] Enumeration Completed, Results saves in file: ${lyellow}amassIntelResults.txt${reset}" | notify -silent
     else
         touch amassIntelResults.txt
     fi
@@ -277,13 +277,13 @@ ownedby () {
 #for_run_amassEnum
 fun_amassEnum () {
         echo -e "\n"
-        echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from Amass enum... " | notify
+        echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from Amass enum... " | notify -silent
         echo -e "\n"
         echo -e "\n"
         amass enum -passive -norecursive -noalts -d $DOMAIN | tee amassEnumResults.txt
         echo -e "\n"
         echo -e "\n"
-        echo -e "$(fun_info) Amass [Mode:Enum] Enumeration Completed, Results saves in file: ${lyellow}amassEnumResults.txt${reset}" | notify
+        echo -e "$(fun_info) Amass [Mode:Enum] Enumeration Completed, Results saves in file: ${lyellow}amassEnumResults.txt${reset}" | notify -silent
 
         ownedby
         sort amassEnumResults.txt amassIntelResults.txt | uniq | tee amassMainResults.txt
@@ -302,13 +302,13 @@ fun_ffufBruteEnum () {
     if [ "$FFUFBF" = 'y' ] || [ "$FFUFBF" = 'Y' ]
     then    
         echo -e "\n"
-        echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from FFUF Bruteforce... " | notify
+        echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from FFUF Bruteforce... " | notify -silent
         echo -e "\n"
         echo -e "\n"
         ffuf -u "https://FUZZ.${DOMAIN}/" -w /usr/share/wordlists/subdomains.txt -v | grep '| URL |' | grep -Po '.*?//\K.*?(?=/)' | tee ffufBruteSubdResults.txt
         echo -e "\n"
         echo -e "\n"
-        echo -e "$(fun_info) FFUF Bruteforce Completed, Results saves in file: ${lyellow}ffufBruteSubdResults.txt${reset}" | notify
+        echo -e "$(fun_info) FFUF Bruteforce Completed, Results saves in file: ${lyellow}ffufBruteSubdResults.txt${reset}" | notify -silent
     else
         touch ffufBruteSubdResults.txt
     fi
@@ -321,13 +321,13 @@ fun_ffufBruteEnum () {
 #from_crtsh
 fun_crtshEnum () {
     echo -e "\n"
-    echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from crt.sh ... " | notify
+    echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from crt.sh ... " | notify -silent
     echo -e "\n"
     echo -e "\n"
     curl -s "https://crt.sh?q=${DOMAIN}&output=json" | jq ".[].common_name,.[].name_value" | cut -d'"' -f2 | sed 's/\\n/\n/g' | sed 's/\*.//g'| sed -r 's/([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4})//g' | sort | uniq | tee crtshResults.txt
     echo -e "\n"
     echo -e "\n"
-    echo -e "$(fun_info) CRT SH Bruteforce Completed, Results saves in file: ${lyellow}crtshResults.txt${reset}" | notify    
+    echo -e "$(fun_info) CRT SH Bruteforce Completed, Results saves in file: ${lyellow}crtshResults.txt${reset}" | notify -silent   
 }
 
 #-----------------------------------------------------------------#
@@ -353,13 +353,13 @@ fun_getAllSubd () {
 #DomainToUrl
 fun_getUrl () {
     echo -e "\n"
-    echo -e "$(fun_init) Getting URLs from httprobe... " | notify
+    echo -e "$(fun_init) Getting URLs from httprobe... " | notify -silent
     echo -e "\n"
     echo -e "\n"
     cat allSubdomains.txt | httprobe | tee httprobeResults.txt
     echo -e "\n"
     echo -e "\n"
-    echo -e "$(fun_init) Getting URLs from httpx... " | notify
+    echo -e "$(fun_init) Getting URLs from httpx... " | notify -silent
     echo -e "\n"
     echo -e "\n"
     echo -e "$(fun_info) It will take some time depens on your target size "
@@ -370,7 +370,7 @@ fun_getUrl () {
     sort httprobeResults.txt httpxResults.txt | uniq | tee allUrls.txt
     echo -e "\n"
     echo -e "\n"
-    echo -e "$(fun_info) URL Enumeration, Results saves in file: ${lyellow}allUrls.txt${reset}" | notify
+    echo -e "$(fun_info) URL Enumeration, Results saves in file: ${lyellow}allUrls.txt${reset}" | notify -silent
 
 }
 
@@ -384,7 +384,7 @@ fun_runNuclei () {
     echo -e "$(fun_init) Running Vulnerability detection " | notify
     echo -e "\n"
     echo -e "\n"
-    nuclei -silent -l allUrls.txt -t $HOME/nuclei-templates/ -o nucleiResults.txt --stats | notify
+    nuclei -silent -l allUrls.txt -t $HOME/nuclei-templates/ -o nucleiResults.txt --stats | notify -silent
 } 
 
 
