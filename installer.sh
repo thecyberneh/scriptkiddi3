@@ -24,6 +24,8 @@ rm -rf scriptkiddi3.sh
 wget https://wordlists-cdn.assetnote.io/data/automated/httparchive_subdomains_2020_11_18.txt -O  subdomains.txt
 mv subdomains.txt /usr/share/wordlists/
 chmod 777 /usr/share/wordlists/subdomains.txt
+cd /$HOME/.config/
+mkdir notify
 
 wget "https://raw.githubusercontent.com/projectdiscovery/notify/main/cmd/integration-test/test-config.yaml" 
 mv test-config.yaml provider-config.yaml
