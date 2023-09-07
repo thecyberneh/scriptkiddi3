@@ -42,7 +42,7 @@ Let's Find Bugs with SCRIPTKIDDI3
 [Thanks ChatGPT for the Description]
   
 
-  
+---  
 ## How it Works ?
 This tool mainly performs 3 tasks
 1. Effective Subdomain Enumeration from Various Tools
