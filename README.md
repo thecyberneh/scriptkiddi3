@@ -57,6 +57,105 @@ git clone https://github.com/thecyberneh/scriptkiddi3.git
 cd scriptkiddi3
 bash installer.sh
 ```
+## IMPORTANT NOTES | Webhook configurations
+- Scriptkiddi3 is using webhooks to send notifications to your Discord/MSTeam/Telegram and other services, so make sure to configure the web hooks by addind URL of your webhook in 
+  `/$HOME/.config/notify/provider-config.yaml`
+- The default links will send the notifiction to my (thecyberneh's) discord and MSTeam.
+- You can paste the URL of your own webhook in following `provider-config.yaml` file ( Do not forget to save it in location :- `/$HOME/.config/notify/provider-config.yaml`
+```yaml
+slack:
+  - id: "slack"
+    slack_channel: "recon"
+    slack_username: "test"
+    slack_format: "{{data}}"
+    slack_webhook_url: "https://hooks.slack.com/services/XXXXXX"
+
+  - id: "vulns"
+    slack_channel: "vulns"
+    slack_username: "test"
+    slack_format: "{{data}}"
+    slack_webhook_url: "https://hooks.slack.com/services/XXXXXX"
+
+discord:
+  - id: "crawl"
+    discord_channel: "crawl"
+    discord_username: "test"
+    discord_format: "{{data}}"
+    discord_webhook_url: "https://discord.com/api/webhooks/XXXXXXXX"
+
+  - id: "subs"
+    discord_channel: "subs"
+    discord_username: "test"
+    discord_format: "{{data}}"
+    discord_webhook_url: "https://discord.com/api/webhooks/XXXXXXXX"
+
+telegram:
+  - id: "tel"
+    telegram_api_key: "XXXXXXXXXXXX"
+    telegram_chat_id: "XXXXXXXX"
+    telegram_format: "{{data}}"
+    telegram_parsemode: "Markdown" # None/Markdown/MarkdownV2/HTML (https://core.telegram.org/bots/api#formatting-options)
+
+pushover:
+  - id: "push"
+    pushover_user_key: "XXXX"
+    pushover_api_token: "YYYY"
+    pushover_format: "{{data}}"
+    pushover_devices:
+      - "iphone"
+
+smtp:
+  - id: email
+    smtp_server: mail.example.com
+    smtp_username: test@example.com
+    smtp_password: password
+    from_address: from@email.com
+    smtp_cc:
+      - to@email.com
+    smtp_format: "{{data}}"
+    subject: "Email subject"
+    smtp_html: false
+    smtp_disable_starttls: false
+
+googlechat:
+  - id: "gc"
+    key: "XXXXXXXX"
+    token: "XXXXXX"
+    space: "XXXXXX"
+    google_chat_format: "{{data}}"
+
+teams:
+  - id: "recon"
+    teams_webhook_url: "https://<domain>.webhook.office.com/webhookb2/xx@xx/IncomingWebhook/xx"
+    teams_format: "{{data}}"
+
+custom:
+  - id: webhook
+    custom_webhook_url: http://host/api/webhook
+    custom_method: GET
+    custom_format: '{{data}}'
+    custom_headers:
+      Content-Type: application/json
+      X-Api-Key: XXXXX
+      
+custom:
+  - id: webhookJson
+    custom_webhook_url: http://host/api/webhook
+    custom_method: GET
+    custom_format: '{"text":{{dataJsonString}} }'
+    custom_headers:
+      Content-Type: application/json
+      X-Api-Key: XXXXX
+
+custom:
+  - id: webhook
+    custom_webhook_url: http://host/api/webhook
+    custom_method: GET
+    custom_sprig: '{"text":"{{ .url }}"}'
+    custom_headers:
+      Content-Type: application/json
+      X-Api-Key: XXXXX
+```
   
 ## Usage 
 
