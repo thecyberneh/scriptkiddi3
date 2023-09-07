@@ -19,6 +19,7 @@ A recon and initial vulnerability detection tool built using shell script and op
 <p align="center">
   <a href="#how-it-works-">How it works</a> •
   <a href="#install-scriptkiddi3">Installation</a> •
+  <a href="#install-with-docker">Install with Docker</a> •
   <a href="#usage">Usage</a> •
   <a href="#modes">MODES</a> •
   <a href="#important-notes--webhook-configurations">Important Notes | Webhook configurations</a> •
