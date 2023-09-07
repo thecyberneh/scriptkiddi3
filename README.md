@@ -60,6 +60,21 @@ git clone https://github.com/thecyberneh/scriptkiddi3.git
 cd scriptkiddi3
 bash installer.sh
 ```
+###  Install with Docker
+
+ScriptKiddi3 is now available as a Docker container, allowing users to access and utilize this powerful tool effortlessly on various platforms, including Windows, Linux, and more. This README provides a quick guide on how to get started with the ScriptKiddi3 Docker container.
+
+Get the Docker image of scriptkiddi3
+```sh
+docker pull thecyberneh/scriptkiddi3:v1
+```
+
+How to run the Docker image of Scriptkiddi3 ?
+```sh
+docker run -it thecyberneh/scriptkiddi3:v1 /bin/bash
+```
+
+**You can always check [SCRIPTKIDDI3's docker repository](https://hub.docker.com/r/thecyberneh/scriptkiddi3).**
 
 ---
   
