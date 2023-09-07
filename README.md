@@ -21,6 +21,7 @@ A recon and initial vulnerability detection tool built using shell script and op
   <a href="#install-scriptkiddi3">Installation</a> •
   <a href="#usage">Usage</a> •
   <a href="#modes">MODES</a> •
+  <a href="#important-notes--webhook-configurations">Important Notes | Webhook configurations</a> •
   <a href="#for-developers">For Developers</a> •
   <a href="#credits">Credits</a> 
 </p>
@@ -57,7 +58,7 @@ git clone https://github.com/thecyberneh/scriptkiddi3.git
 cd scriptkiddi3
 bash installer.sh
 ```
-## IMPORTANT NOTES | Webhook configurations
+## Important Notes | Webhook configurations
 - Scriptkiddi3 is using webhooks to send notifications to your Discord/MSTeam/Telegram and other services, so make sure to configure the web hooks by addind URL of your webhook in 
   `/$HOME/.config/notify/provider-config.yaml`
 - The default links will send the notifiction to my (thecyberneh's) discord and MSTeam.
