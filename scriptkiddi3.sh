@@ -381,7 +381,7 @@ fun_getUrl () {
 #run_nuclei
 fun_runNuclei () {
     echo -e "\n"
-    echo -e "$(fun_init) Running Vulnerability detection " | notify
+    echo -e "$(fun_init) Running Vulnerability detection " | notify -silent
     echo -e "\n"
     echo -e "\n"
     nuclei -silent -l allUrls.txt -t $HOME/nuclei-templates/ -o nucleiResults.txt --stats | notify -silent
