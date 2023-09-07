@@ -49,7 +49,9 @@ This tool mainly performs 3 tasks
 2. Get URLs with open HTTP and HTTPS service.
 3. Run a Nuclei and other scans on previous output
 So basically, this is an autmation script for your initial recon in bugbounty
-  
+
+---
+
 ## Install SCRIPTKIDDI3
    SCRIPTKIDDI3 requires different tools to run successfully. Run the following command to install the latest version with all requirments-
 
@@ -58,6 +60,8 @@ git clone https://github.com/thecyberneh/scriptkiddi3.git
 cd scriptkiddi3
 bash installer.sh
 ```
+
+---
   
 ## Usage 
 
@@ -116,9 +120,11 @@ This will display help for the tool. Here are all the switches it supports.
 
 ```
 
-  
+---
+
+
 ## MODES 
-### 1. FULL EXPLOITATION MODE <br>
+#### 1. FULL EXPLOITATION MODE <br>
 Run SCRIPTKIDDI3 in FULL EXPLOITATION MODE
 ```sh
   scriptkiddi3 -m EXP -d target.com
@@ -131,7 +137,7 @@ FULL EXPLOITATION MODE contains following functions
 - Subdomain Takeover Test on previous results
 <br>
   
-### 2. SUBDOMAIN ENUMERATION MODE <br>
+#### 2. SUBDOMAIN ENUMERATION MODE <br>
 Run scriptkiddi3 in SUBDOMAIN ENUMERATION MODE
 ```sh
   scriptkiddi3 -m SUB -d target.com
@@ -142,7 +148,7 @@ SUBDOMAIN ENUMERATION MODE contains following functions
   or we can say Automation of Subdmain Enumeration by different tools
 <br>
   
-### 3. URL ENUMERATION MODE <br>
+#### 3. URL ENUMERATION MODE <br>
 Run scriptkiddi3 in URL ENUMERATION MODE
 ```sh
   scriptkiddi3 -m URL -d target.com
@@ -181,6 +187,8 @@ github:
 zoomeye:
   - zoomeye_username:zoomeye_password
 ```
+
+---
 
 ## Important Notes | Webhook configurations
 - Scriptkiddi3 is using webhooks to send notifications to your Discord/MSTeam/Telegram and other services, so make sure to configure the web hooks by addind URL of your webhook in 
@@ -281,6 +289,8 @@ custom:
       Content-Type: application/json
       X-Api-Key: XXXXX
 ```
+
+---
   
 ## For Developers
 If you have ideas for new functionality or modes that you would like to see in this tool, you can always submit a pull request (PR) to contribute your changes.
