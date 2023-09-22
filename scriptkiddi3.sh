@@ -280,7 +280,7 @@ fun_amassEnum () {
         echo -e "$(fun_init) Initializing SUBDOMAIN ENUMERATION from Amass enum... " | notify -silent
         echo -e "\n"
         echo -e "\n"
-        amass enum -passive -norecursive -noalts -d $DOMAIN | tee amassEnumResults.txt
+        amass enum -passive -norecursive -d $DOMAIN | tee amassEnumResults.txt
         echo -e "\n"
         echo -e "\n"
         echo -e "$(fun_info) Amass [Mode:Enum] Enumeration Completed, Results saves in file: ${lyellow}amassEnumResults.txt${reset}" | notify -silent
