@@ -1,7 +1,7 @@
 #!/bin/bash
-apt-get install shc
-apt-get install jq
-apt-get install unzip
+sudo apt-get install shc
+sudo apt-get install jq
+sudo apt-get install unzip
 sudo apt install cargo 
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install -v github.com/owasp-amass/amass/v4/...@master
@@ -27,8 +27,8 @@ chmod 777 /$HOME/go/bin/scriptkiddi3
 rm -rf scriptkiddi3.sh
 
 wget https://wordlists-cdn.assetnote.io/data/automated/httparchive_subdomains_2020_11_18.txt -O  subdomains.txt
-mv subdomains.txt /usr/share/wordlists/
-chmod 777 /usr/share/wordlists/subdomains.txt
+sudo mv subdomains.txt /usr/share/wordlists/
+sudo chmod 777 /usr/share/wordlists/subdomains.txt
 cd /$HOME/.config/
 mkdir notify
 
