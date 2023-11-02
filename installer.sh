@@ -3,7 +3,7 @@ apt-get install shc
 apt-get install jq
 apt-get install unzip
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-go install -v github.com/OWASP/Amass/v3/...@master
+go install -v github.com/owasp-amass/amass/v4/...@master
 go install github.com/ffuf/ffuf@latest
 go install -v github.com/LukaSikic/subzy@latest
 go install -v github.com/projectdiscovery/notify/cmd/notify@latest
