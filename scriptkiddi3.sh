@@ -337,13 +337,13 @@ fun_crtshEnum () {
 fun_getAllSubd () {
     fun_subFinderEnum
     fun_findomainEnum
-    fun_amassEnum
+    #fun_amassEnum
     fun_ffufBruteEnum
     fun_crtshEnum
     echo -e "\n"
     echo -e "$(fun_info) Removing Duplicates"
     echo -e "\n"
-    sort subfinerMainResults.txt ${DOMAIN}.txt amassMainResults.txt ffufBruteSubdResults.txt crtshResults.txt | uniq | tee allSubdomains.txt
+    sort subfinerMainResults.txt ${DOMAIN}.txt ffufBruteSubdResults.txt crtshResults.txt | uniq | tee allSubdomains.txt
 }
 
 
