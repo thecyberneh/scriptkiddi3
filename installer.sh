@@ -2,7 +2,7 @@
 sudo apt-get install shc
 sudo apt-get install jq
 sudo apt-get install unzip
-sudo apt install cargo 
+#sudo apt install cargo 
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 go install -v github.com/owasp-amass/amass/v4/...@master
 go install github.com/ffuf/ffuf/v2@latest
@@ -15,10 +15,10 @@ chmod 777 /$HOME/go/bin/findomain
 go install github.com/tomnomnom/httprobe@latest
 go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-wget https://github.com/junnlikestea/vita/releases/download/0.1.16/vita-0.1.16-x86_64-unknown-linux-musl.tar.gz
-tar xsvf vita-0.1.16-x86_64-unknown-linux-musl.tar.gz 
-cp vita-0.1.16-x86_64-unknown-linux-musl/vita /$HOME/go/bin/
-chmod 777 /$HOME/go/bin/vita   
+#wget https://github.com/junnlikestea/vita/releases/download/0.1.16/vita-0.1.16-x86_64-unknown-linux-musl.tar.gz
+#tar xsvf vita-0.1.16-x86_64-unknown-linux-musl.tar.gz 
+#cp vita-0.1.16-x86_64-unknown-linux-musl/vita /$HOME/go/bin/
+#chmod 777 /$HOME/go/bin/vita   
 
 shc -f scriptkiddi3.sh   
 mv scriptkiddi3.sh.x scriptkiddi3
